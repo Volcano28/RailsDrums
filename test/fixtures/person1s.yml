@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  snaredrum_carts: MyString
+  bassdrum_carts: MyString
+  hightomtom_carts: MyString
+  floortomtom_carts: MyString
+  hihat_carts: MyString
+
+two:
+  snaredrum_carts: MyString
+  bassdrum_carts: MyString
+  hightomtom_carts: MyString
+  floortomtom_carts: MyString
+  hihat_carts: MyString

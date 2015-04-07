@@ -1,0 +1,8 @@
+<%@crashes.each do |crash| %>
+<h1><%=crash.name %></h1>
+<h3><%= image_tag crash.imageURL %></h3>
+<h3><%=crash.brand %></h3>
+<h3><%=crash.description %></h3>
+<h3><%=crash.usedby %></h3>
+<br></br>
+<%end%>

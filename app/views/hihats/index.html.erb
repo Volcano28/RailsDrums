@@ -1,0 +1,33 @@
+<h1>Listing hihats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Imageurl</th>
+      <th>Brand</th>
+      <th>Description</th>
+      <th>Usedby</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hihats.each do |hihat| %>
+      <tr>
+        <td><%= hihat.name %></td>
+        <td><%= hihat.imageURL %></td>
+        <td><%= hihat.brand %></td>
+        <td><%= hihat.description %></td>
+        <td><%= hihat.usedby %></td>
+        <td><%= link_to 'Show', hihat %></td>
+        <td><%= link_to 'Edit', edit_hihat_path(hihat) %></td>
+        <td><%= link_to 'Destroy', hihat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hihat', new_hihat_path %>

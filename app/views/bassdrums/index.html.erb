@@ -1,0 +1,33 @@
+<h1>Listing bassdrums</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Imageurl</th>
+      <th>Brand</th>
+      <th>Description</th>
+      <th>Usedby</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bassdrums.each do |bassdrum| %>
+      <tr>
+        <td><%= bassdrum.name %></td>
+        <td><%= bassdrum.imageURL %></td>
+        <td><%= bassdrum.brand %></td>
+        <td><%= bassdrum.description %></td>
+        <td><%= bassdrum.usedby %></td>
+        <td><%= link_to 'Show', bassdrum %></td>
+        <td><%= link_to 'Edit', edit_bassdrum_path(bassdrum) %></td>
+        <td><%= link_to 'Destroy', bassdrum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bassdrum', new_bassdrum_path %>

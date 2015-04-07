@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Template Name: PhotoTeam
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>PhotoTeam | Portfolio</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="../layout/styles/layout.css" type="text/css" />
+<script type="text/javascript" src="../layout/scripts/jquery.min.js"></script>
+<!-- prettyPhoto -->
+<link rel="stylesheet" href="../layout/scripts/prettyphoto/prettyPhoto.css" type="text/css" />
+<script type="text/javascript" src="../layout/scripts/prettyphoto/jquery.prettyPhoto.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $("a[rel^='prettyPhoto']").prettyPhoto({
+        theme: 'dark_rounded',
+        overlay_gallery: false,
+        social_tools: false
+    });
+});
+</script>
+<!-- / prettyPhoto -->
+</head>
+<body id="top">
+<div class="wrapper col1">
+  <div id="header" class="clear">
+    <div class="fl_left">
+      <h1><a href="../index.html">Hard Drum</a></h1>
+      <p>Floor Tom-Tom Section</p>
+    </div>
+    <div class="fl_right">
+      <form action="#" method="post" id="search">
+        <fieldset>
+          <legend>Site Search</legend>
+          <input type="text" value="Search Our Website&hellip;" onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" />
+          <input type="image" id="go" src="../layout/images/search.gif" alt="Search" />
+        </fieldset>
+      </form>
+      <ul id="topnav" class="clear">
+        <li><a href="allHihats">Hi-Hats</a></li>
+        <li><a href="/allFloortomtoms">Floor Tom-toms</a></li>
+        <li><a href="allHightomtoms">High Tom-toms</a></li>
+        <li><a href="allBassdrums">Bass Drums</a></li>
+        <li><a href="allSnaredrums">Snare Drums</a></li>
+        <li class="active last"><a href="/">Home</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col2">
+  <div id="shout">
+    <h2>Floor Tom-Tom</h2>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col3">
+  <div id="container" class="clear"> 
+    <!-- ####################################################################################################### -->
+    <div id="portfolio">
+      <ul>
+        <li class="clear">
+          <% @floortomtoms.each do |floortomtom| %>
+  <div class="fl_left"><a href="<%= floortomtom.imageURL %>" rel="prettyPhoto" title="Floor Tom-Tom"><img src="<%= floortomtom.imageURL %>" alt="Floor Tom-Tom" width="800" height="400"/></a></div>
+          <div class="fl_right">
+            <h2><%= floortomtom.name %></h2>
+            <p><%=floortomtom.brand %></p>
+<p><%=floortomtom.usedby %></p>
+<a href="/floortomtoms/<%=floortomtom.id%>" class="button_small" style="float:right; margin-top:120px">More information &raquo;</a>
+<p><%= floortomtom.description %></p>
+<a href="/floortomtoms/<%=floortomtom.id%>" class="button_small" style="float:right; margin-top:120px">More information &raquo;</a>
+            <p class="readmore"><a href="http://pearldrum.com/">Add to Cart &raquo;</a></p>
+          </div>
+		  <% end %>
+        </li>
+      </ul>
+    </div>
+    <!-- ####################################################################################################### -->
+    <div class="pagination">
+      <ul>
+        <li class="prev"><a href="#">&laquo; Previous</a></li>
+        <li><a href="allSnaredrums">1</a></li>
+        <li><a href="allBassdrums">2</a></li>
+        <li class="splitter">&hellip;</li>
+        <li><a href="allFloortomtoms">3</a></li>
+        <li class="current">3</li>
+        <li><a href="allHihats">4</a></li>
+        <li><a href="#">5</a></li>
+        <li class="splitter">&hellip;</li>
+        <li><a href="#">6</a></li>
+        <li><a href="#">7</a></li>
+        <li class="next"><a href="#">Next &raquo;</a></li>
+      </ul>
+    </div>
+    <!-- ####################################################################################################### --> 
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+
+<!-- ####################################################################################################### -->
+<div class="wrapper">
+  <div id="copyright" class="clear">
+    <p class="fl_left">Copyright &copy; 2014 - All Rights Reserved - <a href="#">Domain Name</a></p>
+    <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="">OS Templates</a></p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @floortomtom.name %>
+</p>
+
+<p>
+  <strong>Imageurl:</strong>
+  <%= @floortomtom.imageURL %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @floortomtom.brand %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @floortomtom.description %>
+</p>
+
+<p>
+  <strong>Usedby:</strong>
+  <%= @floortomtom.usedby %>
+</p>
+
+<%= link_to 'Edit', edit_floortomtom_path(@floortomtom) %> |
+<%= link_to 'Back', floortomtoms_path %>

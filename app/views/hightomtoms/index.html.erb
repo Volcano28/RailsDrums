@@ -1,0 +1,33 @@
+<h1>Listing hightomtoms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Imageurl</th>
+      <th>Brand</th>
+      <th>Description</th>
+      <th>Usedby</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hightomtoms.each do |hightomtom| %>
+      <tr>
+        <td><%= hightomtom.name %></td>
+        <td><%= hightomtom.imageURL %></td>
+        <td><%= hightomtom.brand %></td>
+        <td><%= hightomtom.description %></td>
+        <td><%= hightomtom.usedby %></td>
+        <td><%= link_to 'Show', hightomtom %></td>
+        <td><%= link_to 'Edit', edit_hightomtom_path(hightomtom) %></td>
+        <td><%= link_to 'Destroy', hightomtom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hightomtom', new_hightomtom_path %>

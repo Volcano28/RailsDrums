@@ -1,0 +1,33 @@
+<h1>Listing snaredrums</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Imageurl</th>
+      <th>Brand</th>
+      <th>Description</th>
+      <th>Usedby</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @snaredrums.each do |snaredrum| %>
+      <tr>
+        <td><%= snaredrum.name %></td>
+        <td><%= image_tag snaredrum.imageURL %></td>
+        <td><%= snaredrum.brand %></td>
+        <td><%= snaredrum.description %></td>
+        <td><%= snaredrum.usedby %></td>
+        <td><%= link_to 'Show', snaredrum %></td>
+        <td><%= link_to 'Edit', edit_snaredrum_path(snaredrum) %></td>
+        <td><%= link_to 'Destroy', snaredrum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Snaredrum', new_snaredrum_path %>

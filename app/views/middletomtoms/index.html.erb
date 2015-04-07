@@ -1,0 +1,33 @@
+<h1>Listing middletomtoms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Imageurl</th>
+      <th>Brand</th>
+      <th>Description</th>
+      <th>Usedby</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @middletomtoms.each do |middletomtom| %>
+      <tr>
+        <td><%= middletomtom.name %></td>
+        <td><%= middletomtom.imageURL %></td>
+        <td><%= middletomtom.brand %></td>
+        <td><%= middletomtom.description %></td>
+        <td><%= middletomtom.usedby %></td>
+        <td><%= link_to 'Show', middletomtom %></td>
+        <td><%= link_to 'Edit', edit_middletomtom_path(middletomtom) %></td>
+        <td><%= link_to 'Destroy', middletomtom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Middletomtom', new_middletomtom_path %>

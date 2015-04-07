@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Template Name: PhotoTeam
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>PhotoTeam</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+    $('.photo_category').showFeatureText();
+    $(".thumbs a").click(function () {
+        var imgpath = $(this).attr("href");
+        var imgalt = $(this).attr("alt");
+        $("#placeholder").attr({
+            src: imgpath,
+            alt: imgalt
+        });
+        return false;
+    });
+});
+$.fn.showFeatureText = function () {
+    return this.each(function () {
+        var box = $(this);
+        var text = $('span', this);
+        text.css({
+            display: 'block',
+            position: 'absolute',
+            top: '0',
+            left: '0'
+        }).hide();
+        box.hover(function () {
+            text.slideDown("fast");
+        }, function () {
+            text.slideUp("fast");
+        });
+    });
+}
+</script>
+</head>
+<body id="top">
+<div class="wrapper col1">
+  <div id="header" class="clear">
+    <div class="fl_left">
+      <h1><a href="/">HardDrum</a></h1>
+      <p>Hardware for Drummers</p>
+    </div>
+    <div class="fl_right">
+      <form action="#" method="post" id="search">
+        <fieldset>
+          <legend>Site Search</legend>
+          <input type="text" value="Search Our Website&hellip;" onfocus="this.value=(this.value=='Search Our Website&hellip;')? '' : this.value ;" />
+          <input type="image" id="go" src="layout/images/search.gif" alt="Search" />
+        </fieldset>
+      </form>
+      <ul id="topnav" class="clear">
+	  <li><a href="/MyCart">Your Cart</a></li>
+        <li><a href="allHihats">Hi-Hats</a></li>
+        <li><a href="/allFloortomtoms">Floor Tom-toms</a></li>
+        <li><a href="allHightomtoms">High Tom-toms</a></li>
+        <li><a href="allBassdrums">Bass Drums</a></li>
+        <li><a href="allSnaredrums">Snare Drums</a></li>
+        <li class="active last"><a href="/">Home</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col2">
+  <div id="homepage" class="clear">
+    <p><img id="placeholder" src="images/demo/img21.jpg" alt="" /></p>
+    <div class="fl_right">
+      <h2>Featured</h2>
+      <ul class="thumbs">
+        <li><a href="images/demo/img5.jpg"><img src="images/demo/img5.jpg" alt="" /></a></li>
+        <li><a href="images/demo/img6.jpg"><img src="images/demo/img6.jpg" alt="" /></a></li>
+        <li><a href="images/demo/img8.jpg"><img src="images/demo/img8.jpg" alt="" /></a></li>
+        <li class="last"><a href="images/demo/img14.jpg"><img src="images/demo/img12.jpg" alt="" /></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col3">
+  <div id="container" class="clear"> 
+    <!-- ####################################################################################################### -->
+    <div id="hpage_services" class="clear">
+      <ul>
+        <li class="photo_category"><span>Photo Category 1</span><a href="#"><img src="images/demo/img33.jpg" alt="" /></a></li>
+        <li class="photo_category"><span>Photo Category 2</span><a href="#"><img src="images/demo/img7.jpg" alt="" /></a></li>
+        <li class="photo_category last"><span>Photo Category 3</span><a href="#"><img src="images/demo/img13.jpg" alt="" /></a></li>
+      </ul>
+    </div>
+    <div id="hpage_info" class="clear">
+      <div class="fl_left">
+        <h2 class="title">The sound of yourself and your drums.</h2>
+        <p>At Drum Workshop, The Drummer’s Choice® is more than a slogan, it’s a fact. After years of innovation and tireless dedication to improving the way drum products are made, HD drums, pedals and hardware are the standard by which all others are measured. To get here, it takes more than a working knowledge of the instrument or a few good ideas; it takes a true passion for designing and manufacturing the very best.</a>.</p>
+      </div>
+      <div class="fl_right">
+        <h2 class="title">Meet The Famous Drummers</h2>
+        <ul>
+          <li class="clear">
+            <div class="imgl"><img src="images/demo/MP.jpg" alt="" /></div>
+            <div class="teamember">
+              <p class="name">Mike Portnoy</p>
+              <p> (born April 20, 1967) is an American drummer primarily known as the former drummer, backing vocalist, and a co-founder of the progressive metal/rock band Dream Theater. Known for his technical skill as a drummer, Portnoy has won 29 awards from the Modern Drummer magazine.[1] He co-produced six Dream Theater albums with guitarist John Petrucci, starting from Metropolis Pt. 2: Scenes from a Memory through Black Clouds and Silver Linings. From A Change of Seasons onwards, Portnoy had been writing a significant amount of Dream Theater's lyrics. He is the second youngest person (after Neil Peart) to be inducted into the Modern Drummer's Hall of Fame (at 37 years of age)</p>
+              <p class="readmore"><a href="http://en.wikipedia.org/wiki/Mike_Portnoy">Continue Reading &raquo;</a></p>
+            </div>
+          </li>
+          <li class="clear last">
+            <div class="imgl"><img src="images/demo/MM.jpg" alt="" /></div>
+            <div class="teamember">
+              <p class="name">Mike Mangini</p>
+              <p>(born April 18, 1963 in Newton, Massachusetts) is an American drummer, and the current drummer for progressive metal band Dream Theater. He has played for Annihilator, Extreme, James LaBrie, and Steve Vai, among others. He was on the faculty at the Berklee College of Music in Boston and is also known for his work as a session musician.[1] At his height from 2002–2005, Mangini was famous for setting five World's Fastest Drummer (WFD) records.</p>
+              <p class="readmore"><a href="http://en.wikipedia.org/wiki/Mike_Mangini">Continue Reading &raquo;</a></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- ####################################################################################################### --> 
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper">
+  <div id="footer">
+    <div class="verticaline clear">
+      <div class="box size1">
+        <h2>Upload New Images</h2>
+        <p id="rss"><a href="/images/new"><img src="layout/images/rss.gif" alt="" /></a></p>
+      </div>
+      
+      <div class="box size3">
+        <ul>
+          <li><span>Facebook </span> <a href="https://www.facebook.com/profile.php?id=744148066"><img src="images/demo/icon1.jpg" alt="" /></a></li>
+          <li><span>Twitter</span> <a href="www.twitter.com"><img src="images/demo/icon2.jpg" alt="" /></a></li>
+          <li><span>LinkedIn</span> <a href="https://www.linkedin.com/profile/view?id=376660720&trk=nav_responsive_tab_profile_pic"><img src="images/demo/icon3.jpg" alt="" /></a></li>
+        </ul>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Newsletter Signup:</legend>
+            <input type="text" id="newsletter" value="Enter Email Here&hellip;" onfocus="this.value=(this.value=='Enter Email Here&hellip;')? '' : this.value ;" />
+            <input type="image" id="subscribe" src="layout/images/submit.gif" alt="Submit" />
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper">
+  <div id="copyright" class="clear">
+    <p class="fl_left">Copyright &copy; 2014 - All Rights Reserved - <a href="/">Domain Name</a></p>
+    <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+  </div>
+</div>
+</body>
+</html>
+
+

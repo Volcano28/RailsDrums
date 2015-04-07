@@ -1,0 +1,20 @@
+  <h2>  Your Cart </h2>
+  <div id="portfolio">
+      <ul>
+        <li class="clear">
+          <% @snaredrums.each do |snaredrum| %>
+  <div class="fl_left"><a href="<%= snaredrum.imageURL %>" rel="Photo" title="Signature Snares"><img src="<%= snaredrum.imageURL %>" alt="Signature Snares" width="800" height="400"/></a></div>
+          <div class="fl_right">
+            <h2><%= snaredrum.name %></h2>
+            <p><%=snaredrum.brand %></p>
+<p><%=snaredrum.usedby %></p>
+<a href="/snaredrums/<%=snaredrum.id%>" class="button_small" style="float:right; margin-top:120px">More information &raquo;</a>
+<p><%= snaredrum.description %></p>
+
+
+         
+          </div>
+		  <% end %>
+        </li>
+      </ul>
+    </div>

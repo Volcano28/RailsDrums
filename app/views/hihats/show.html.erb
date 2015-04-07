@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @hihat.name %>
+</p>
+
+<p>
+  <strong>Imageurl:</strong>
+  <%= @hihat.imageURL %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @hihat.brand %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @hihat.description %>
+</p>
+
+<p>
+  <strong>Usedby:</strong>
+  <%= @hihat.usedby %>
+</p>
+
+<%= link_to 'Edit', edit_hihat_path(@hihat) %> |
+<%= link_to 'Back', hihats_path %>

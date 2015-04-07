@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Template Name: PhotoTeam
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>PhotoTeam</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+    $('.photo_category').showFeatureText();
+    $(".thumbs a").click(function () {
+        var imgpath = $(this).attr("href");
+        var imgalt = $(this).attr("alt");
+        $("#placeholder").attr({
+            src: imgpath,
+            alt: imgalt
+        });
+        return false;
+    });
+});
+$.fn.showFeatureText = function () {
+    return this.each(function () {
+        var box = $(this);
+        var text = $('span', this);
+        text.css({
+            display: 'block',
+            position: 'absolute',
+            top: '0',
+            left: '0'
+        }).hide();
+        box.hover(function () {
+            text.slideDown("fast");
+        }, function () {
+            text.slideUp("fast");
+        });
+    });
+}
+</script>
+</head>
+<body id="top">
+<div class="wrapper col1">
+  <div id="header" class="clear">
+    <div class="fl_left">
+      <h1><a href="/">HardDrum</a></h1>
+      <p>Hardware for Drummers</p>
+    </div>
+    <div class="fl_right">
+      
+      <ul id="topnav" class="clear">
+	  <li><a href="/MyCart">Your Cart</a></li>
+        <li><a href="allHihats">Hi-Hats</a></li>
+        <li><a href="/allFloortomtoms">Floor Tom-toms</a></li>
+        <li><a href="allHightomtoms">High Tom-toms</a></li>
+        <li><a href="allBassdrums">Bass Drums</a></li>
+        <li><a href="allSnaredrums">Snare Drums</a></li>
+        <li class="active last"><a href="/">Home</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<% if !@image.errors.empty? %>
+  <div class="alert alert-error">
+    <ul>
+      <% @image.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="well">
+  <%= form_for @image, html: { multipart: true } do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :attachment %>
+    <%= f.file_field :attachment %>
+    <%= f.submit "Save", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
+
+<div class="well">
+<% @images.each do |image| %>
+  <div class="fl_left"><a href="<%= image.attachment %>" rel="prettyPhoto" title="Signature Snares"><img src="<%= image.attachment %>" alt="Signature Snares" width="800" height="400"/></a></div>
+          <div class="fl_right">
+            <h2><%= image.name %></h2>
+			<% end %>
+</div>
+
+

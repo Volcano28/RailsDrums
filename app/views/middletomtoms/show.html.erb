@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @middletomtom.name %>
+</p>
+
+<p>
+  <strong>Imageurl:</strong>
+  <%= @middletomtom.imageURL %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @middletomtom.brand %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @middletomtom.description %>
+</p>
+
+<p>
+  <strong>Usedby:</strong>
+  <%= @middletomtom.usedby %>
+</p>
+
+<%= link_to 'Edit', edit_middletomtom_path(@middletomtom) %> |
+<%= link_to 'Back', middletomtoms_path %>

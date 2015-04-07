@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @crash.name %>
+</p>
+
+<p>
+  <strong>Imageurl:</strong>
+  <%= @crash.imageURL %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @crash.brand %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @crash.description %>
+</p>
+
+<p>
+  <strong>Usedby:</strong>
+  <%= @crash.usedby %>
+</p>
+
+<%= link_to 'Edit', edit_crash_path(@crash) %> |
+<%= link_to 'Back', crashes_path %>

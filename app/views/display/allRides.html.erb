@@ -1,0 +1,8 @@
+<%@rides.each do |ride| %>
+<h1><%=ride.name %></h1>
+<h3><%= image_tag ride.imageURL %></h3>
+<h3><%=ride.brand %></h3>
+<h3><%=ride.description %></h3>
+<h3><%=ride.usedby %></h3>
+<br></br>
+<%end%>
